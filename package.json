@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThiagoAGDev/criando-um-site-responsivo-do-comeco-ao-fim.git"
+    "url": "git+https://github.com/DihCodigo/Portfolio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ThiagoAGDev/criando-um-site-responsivo-do-comeco-ao-fim/issues"
+    "url": "https://github.com/DihCodigo"
   },
-  "homepage": "https://github.com/ThiagoAGDev/criando-um-site-responsivo-do-comeco-ao-fim#readme",
+  "homepage": "https://github.com/DihCodigo",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
