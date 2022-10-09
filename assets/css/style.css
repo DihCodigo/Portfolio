@@ -1,99 +1,27 @@
 :root {
-    /*cor de fundo*/
     --bg-color-primary: #158cba;
-    --bg-color-secondary: white;
-    /*cor de texto*/
-    --text-color-primary: black;
-    --text-color-secondary: white;
-    --text-color-terciary: dodgerblue;
-    --text-color-extra: rgb(2, 61, 121);
-    /*cor decorativo*/
-    --decoration-color-primary: rgb(2, 61, 121);
-    --decoration-color-secondary: #696969;
 
+    --decoration-color-primary: rgb(2, 61, 121);
+    --decoration-color-secondary: white;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-
+    font-family: "Montserrat", sans-serif;
 }
 
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
 
 body {
-    font-family: "Montserrat", sans-serif;
-    overflow-x: hidden;
-    width: 100vw;
+    background-color: white;
 }
 
-
-/*HEADER*/
-header {
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 150px;
-    position: fixed;
-    background-color: var(--bg-color-secondary);
-    box-shadow: 5px 10px 18px #1b1b1b;
-    z-index: 10;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100vw;
-    list-style: none;
-}
-
-.menu ul a {
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--text-color-terciary);
-
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    -ms-transition: 1s;
-    transition: 1s
-}
-
-.menu ul a:hover {
-    box-shadow: 0 10px 0 0 var(--decoration-color-primary) !important;
-    padding-bottom: 20px;
-    opacity: 1 !important;
-}
-
-/*@end*/
-
-/*Sobre Section*/
-.sobre #bg {
-    background-image: url("../image/bg-img1.jpg");
-}
-
-.sobre .bg {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.sobre .info {
-
-    position: absolute;
-    text-align: center;
-    width: 100vw;
-    height: 90vh;
-}
-
-.sobre .info p {
-    width: 100vw;
-    margin-top: 350px;
-    margin-left: 100px;
+h1 {
     font-size: 2.5em;
     font-family: "Lobster", sans-serif;
     /*ANIMAÇAO*/
@@ -102,13 +30,48 @@ header {
     overflow: hidden;
 }
 
-.sobre .info span {
-    color: var(--text-color-extra);
+/*CSS HEADER*/
+#header {
+    display: flex;
+    height: 100px;
+    box-shadow: 5px 10px 18px #1b1b1b;
 }
 
+#header a {
+    font-weight: 500;
+    margin: 0px 30px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+    transition: 1s;
+}
+
+#header a:hover {
+    box-shadow: 0 10px 0 0 var(--decoration-color-secondary) !important;
+    padding-bottom: 20px;
+    opacity: 1 !important;
+}
+
+
+#background-img {
+    background-image: url("../image/bg-img1.jpg");
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#background-img span {
+    color: var(--decoration-color-primary);
+    font-weight: 700;
+    font-family: "Lobster", sans-serif;
+}
+
+/*ANIMAR PARAGRAFO DE BEM VINDO*/
 .typing-animation {
-    animation: blinkCursor 1000ms steps(50) infinite normal,
-        typing 4s steps(50) 1s normal both;
+    animation: typing 5s steps(50) 1s normal both;
 }
 
 /*keyframe para digitaçao do paragrafo*/
@@ -122,28 +85,11 @@ header {
     }
 }
 
-@keyframes blinkCursor {
-    from {
-        border-right-color: rgba(19, 19, 19, 0.75);
-    }
-
-    to {
-        border-right-color: transparent;
-    }
-}
-
-.sobre .info a {
-
-    text-decoration: none;
-    padding: 10px 30px;
-    width: 300px;
-    border: 2px solid blue;
-    border-radius: 7px;
-}
-
-.sobre img {
+/*ANIMAR ROLAGEM*/
+#background-img img {
     animation: jumping 1s linear infinite;
     cursor: pointer;
+    margin-top: 100px;
 }
 
 /*keyframe para a movimentação do botao jumppage*/
@@ -161,40 +107,16 @@ header {
     }
 }
 
-/*@end*/
-
-/*Conteudo do sobre*/
-.conteudo-sobre h2 {
-    padding: 0px 10px;
-    height: 50vh;
-    color: var(--text-color-extra);
-    border-right: 5px solid var(--decoration-color-primary);
-}
-
-.conteudo-sobre {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid white;
-    padding: 30px;
+/*SECTION ABOUT*/
+#about {
+    height: 70vh;
     margin-top: 50px;
+    padding: 20px;
 }
 
-.conteudo-sobre .historia {
-    width: 40vw;
-}
+#about img {}
 
-.conteudo-sobre .historia h3 {
-    font-weight: 700;
-}
-
-.conteudo-sobre .historia p {
-    font-family: "Montserrat", sans-serif;
-    color: var(--text-color-primary);
-    font-weight: 500;
-    font-style: italic;
-}
+/*ANIMAR CARTAO*/
 
 .virar-container {
     display: flex;
@@ -237,34 +159,14 @@ header {
 }
 
 .tras p {
-    color: var(--text-color-secondary);
+    color: white;
     font-size: 0.8em;
 }
 
-/*@end*/
-
-/*SEction Conteudo Habilidade*/
-.conteudo-habilidade .virar-container {
-    display: flex;
-    width: 200px;
-    height: 100px;
-    margin-left: 30px;
-    margin-top: 30px;
-    perspective: 1000px;
-}
-
-.conteudo-habilidade h2 {
-    padding: 0px 10px;
-    height: 90vh;
-    color: var(--text-color-secondary);
-    border-right: 5px solid var(--text-color-secondary);
-}
-
-.conteudo-habilidade {
-    width: 100vw;
+/*SECTION HABILITS*/
+#habilits {
     height: 100vh;
-    display: flex;
-    padding: 30px;
+    padding: 20px;
     background-color: var(--bg-color-primary);
 
     box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
@@ -272,47 +174,33 @@ header {
     -moz-box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
 }
 
-.conteudo-habilidade .nivel-habil {
-    width: 20vw;
-}
-
-.conteudo-habilidade .habilidades {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+#habilits h2 {
+    color: var(--decoration-color-secondary);
 }
 
 /*Barra de progresso circular*/
-.habilidades .barra-habil {
+#barra-habil {
     width: 100%;
     height: 20px;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-/*@end*/
-
-/*Section SECTION projetos*/
-.conteudo-projetos h2 {
-    padding: 0px 10px;
-    height: 90vh;
-    width: 20vw;
-    color: var(--text-color-extra);
-    border-right: 5px solid var(--text-color-extra);
-}
-
-.conteudo-projetos {
-    width: 100vw;
-    height: 100vh;
+#princ-habilits {
     display: flex;
     justify-content: space-around;
-    border: 1px solid white;
-    padding: 30px;
-    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
+/*SECTION PROJECT*/
+#projects {
+    height: 100vh;
+    margin-top: 50px;
+    padding: 20px;
+}
 
-.container {
+/*ANIMAR CARD PROJETO*/
+.container-proj {
     width: 80vw;
     display: flex;
     gap: 30px;
@@ -392,6 +280,7 @@ header {
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+    color: var(--decoration-color-secondary);
     transform: translateY(30px);
 }
 
@@ -422,6 +311,7 @@ header {
     padding: 15px;
     transform: rotate(-180deg);
     transition: all .5s;
+    color: var(--decoration-color-secondary);
 }
 
 .card:hover .arrow {
@@ -432,39 +322,27 @@ header {
     font-size: 2em;
 }
 
-/*@end*/
-
-/*SECTION CONTATO IN - GH*/
-.conteudo-contato h2 {
-    padding: 0px 10px;
-    height: 90vh;
-    width: 20vw;
-    color: var(--text-color-secondary);
-    border-right: 5px solid var(--text-color-secondary);
-}
-
-.conteudo-contato {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
+/*SECTION CONTAT*/
+#contat {
+    height: 50vh;
+    padding: 20px;
+    background-color: var(--bg-color-primary);
     margin-top: 200px;
 
-    padding: 10px;
-    background-color: var(--bg-color-primary);
 
     box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
     -webkit-box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
     -moz-box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
-
-
 }
 
+/*ANIMAR CONTAT*/
 .backblue {
-    width: 100%;
-    height: 200px;
-    background-color: var(--text-color-extra);
+    background-color: white;
     display: flex;
+
+    -webkit-box-shadow: -1px 0px 0px 9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 0px 0px 9px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 0px 0px 9px rgba(0, 0, 0, 0.75);
 }
 
 .links {
@@ -485,16 +363,17 @@ header {
     background-image: url("../image/github-2.png");
 }
 
-.conteudo-contato .container {
+.container {
     position: relative;
+    padding-top: 70px;
     max-width: 700px;
-    height: 200px;
-    background-color: beige;
+    height: 50px;
+    background-color: white;
     margin: 0 auto;
     margin: 0 auto;
 }
 
-.conteudo-contato .element {
+.element {
     position: absolute;
     left: 0;
     width: 70px;
@@ -532,117 +411,73 @@ header {
     }
 }
 
-/*@end*/
 
 /*Footer*/
-.footer {
-    background-color: var(--bg-color-secondary);
-    height: 10vh;
-    width: 100vw;
-    z-index: 10;
-
-    
-    box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
-    -webkit-box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
-    -moz-box-shadow: 1px 1px 12px 11px rgba(0, 0, 0, 0.73);
+footer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.footer p {
-    text-align: center;
-    padding: 20px;
+footer #footer-card {
+    border-top: 2px solid black;
+    font-size: 2em;
 }
 
-/*@end*/
-/**/
+
+
+/*RESPONSIVE MOBILE*/
 @media (max-width: 425px) {
-
-    .menu ul a {
-        font-size: 0.7em;
+    h1 {
+        font-size: 0.85em;
     }
 
-    .sobre .info p {
-        margin-top: 250px;
-        margin-left: 10px;
-        font-size: 0.9em;
-        font-family: "Lobster", sans-serif;
+    h2 {
+        margin: 0;
+
     }
 
-    .conteudo-sobre {
+    #header a {
+        font-size: 0.5em;
+    }
+
+    #col {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
     }
 
-    .conteudo-sobre .historia {
-        width: 80vw;
-    }
-
-    .conteudo-sobre h2 {
-        padding: 0px 0px;
-    }
-
-    .conteudo-habilidade h2 {
-        height: 40px;
-    }
-
-    .conteudo-habilidade {
-        display: flex;
-        height: 1500px;
-        flex-direction: column;
-        margin-top: 350px;
-        background-color: var(--bg-color-primary);
-    }
-
-    .conteudo-habilidade .virar-container {
-        margin-bottom: 100px;
-    }
-
-    .conteudo-habilidade .virar-container .barra-habil {
-        width: 200px;
-    }
-
-    .conteudo-projetos h2 {
+    #historia {
         width: 90vw;
-        padding: 20px 0px;
     }
 
-    .conteudo-projetos {
-        margin-top: 350px;
-        display: flex;
-        flex-direction: column;
-    }
-
-
-
-    .conteudo-contato {
-        margin-top: 350px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .conteudo-contato h2 {
+    #perfil-foto {
         width: 90vw;
-        height: 20px;
-        padding: 10px 0px;
-        margin-bottom: 50px;
-        
     }
 
-    .backblue {
-        width: 100%;
-        height: 200px;
-        background-color: var(--text-color-extra);
-        display: flex;
+    #habilits {
+        margin-top: 450px;
+        height: 270vh;
+    }
+
+    #projects {
+        height: 150vh;
+    }
+
+    #contat {
+        margin-top: 400px;
     }
 
     .links {
-        width: 100px;
-        height: 100px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        width: 70px;
+        height: 70px;
 
+    }
+
+    .container {
+        padding-top: 0px;
+        max-width: 400px;
     }
 
 
@@ -660,11 +495,14 @@ header {
         }
 
         100% {
-            left: 65%;
+            left: 70%;
             transform: rotate(135deg);
             background: blue;
             border-radius: 50%;
         }
     }
 
+    footer #footer-card {
+        font-size: 1em;
+    }
 }
