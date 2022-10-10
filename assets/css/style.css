@@ -235,7 +235,7 @@ h1 {
 }
 
 .card #img2 {
-    background-image: url('../image/emBreve.jpg');
+    background-image: url('../image/Capturarjogovelha.PNG');
 }
 
 .card #img3 {
@@ -249,7 +249,6 @@ h1 {
     align-items: center;
     height: 200px;
     background-size: cover;
-    background-position: center;
     transition: all .5s;
     z-index: 2;
     position: relative;
@@ -283,6 +282,8 @@ h1 {
     color: var(--decoration-color-secondary);
     transform: translateY(30px);
 }
+
+.card .content a {color: var(--decoration-color-secondary);}
 
 .card:hover .content {
     height: 260px;
